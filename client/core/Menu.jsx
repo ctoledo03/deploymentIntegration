@@ -10,7 +10,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 
 const isActive = (location, path) => {
-  return location.pathname === path ? { color: '#ff4081' } : { color: '#ffffff' };
+  return location.pathname === path ? { color: '#F4C314 ' } : { color: '#ffffff' };
 };
 export default function Menu(){ 
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function Menu(){
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        MERN Skeleton
+        Countries Trivias
       </Typography>
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(location, "/")}>

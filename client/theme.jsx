@@ -6,13 +6,13 @@ useNextVariants: true,
 },
 palette: {
 primary: {
-light: '#5c67a3', 
-main: '#3f4771', 
+light: '#041014', 
+main: '#041014', 
 dark: '#2e355b', 
 contrastText: '#fff',
 },
 secondary: {
-light: '#ff79b0', 
+light: '#041014', 
 main: '#ff4081', 
 dark: '#c60055', 
 contrastText: '#000',
