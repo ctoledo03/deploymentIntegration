@@ -1,8 +1,6 @@
 import mongoose from 'mongoose'
 import crypto from 'crypto'
 
-//const mongoose = require('mongoose');
-
 const UserSchema = new mongoose.Schema({
    name: {
       type: String,
@@ -40,7 +38,6 @@ UserSchema.virtual('password')
       this._password = password;
       this.salt = this.makeSalt();
       this.hashed_password = this.encryptPassword(password)
-   //this.hashed_password = password;
       console.log(this.hashed_password)
    })
 
@@ -80,6 +77,5 @@ UserSchema.methods = {
       return Math.round((new Date().valueOf() * Math.random())) + '' 
    }
 }
-//module.exports = mongoose.model('User', UserSchema);
 export default mongoose.model('User', UserSchema);
 
