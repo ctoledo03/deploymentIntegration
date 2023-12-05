@@ -1,43 +1,38 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import logo from './../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-   
-
-const useStyles = makeStyles(theme => ({
-  card: {
-    maxWidth: 600,
-    margin: 'auto',
-    marginTop: theme.spacing(5),
-  },
-  title: {
-    padding: theme.spacing(3, 2.5, 2),
-    color: theme.palette.openTitle,
-  },
-  media: {
-    minHeight: 400,
-  },
-}));
+import Styles from './styles';
 
 export default function Home(){ 
-const classes = useStyles()
-return (
-<Card className={classes.card}>
-   
-  <Typography variant="h6" className={classes.title}>Home Page</Typography>
-
-
-<CardMedia className={classes.media}
-image={logo} title="Filatino logo"/>
-<CardContent>
-<Typography variant="body2" component="p"> 
-Welcome to Filatinos Countries Trivias.
-</Typography> 
-</CardContent>
-</Card> 
-)
+  return (
+    <>
+      <Styles/>
+      <main>
+        <section id="intro">
+          <div className="intro-text">
+            <img src="./../assets/images/logo.png" alt="Filatino Logo" width="300px" height="300px" />
+            <h1>Welcome to the Quiz Website!</h1>
+            <p>Choose a flag below to start a quiz</p>
+          </div>
+          <div className="flags">
+            <div className="flags-row">
+              <Link to="/peruQuiz" className="flag-link" data-country="Peru">
+                <img src="./../assets/images/peru.png" alt="Peruvian Flag" />
+              </Link>
+              <Link to="/columbiaQuiz" className="flag-link" data-country="Colombia">
+                <img src="./../assets/images/colombia.png" alt="Colombian Flag" />
+              </Link>
+            </div>
+            <div className="flags-row">
+              <Link to="/panamaQuiz" className="flag-link" data-country="Panama">
+                <img src="./../assets/images/panama.png" alt="Panamanian Flag" />
+              </Link>
+              <Link to="/philippinesQuiz" className="flag-link" data-country="Philippines">
+                <img src="./../assets/images/filipinas.png" alt="Philippine Flag" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
