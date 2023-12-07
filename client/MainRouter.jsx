@@ -7,7 +7,7 @@ import Home from './core/Home'
 import Menu from './core/Menu' 
 import PeruQuiz from './core/PeruQuiz.jsx';
 import ColumbiaQuiz from './core/ColumbiaQuiz.jsx';
-import PanamaQuiz from './core/CanamaQuiz.jsx';
+import PanamaQuiz from './core/PanamaQuiz.jsx';
 import PhilippinesQuiz from './core/PhilippinesQuiz.jsx';
 
 
